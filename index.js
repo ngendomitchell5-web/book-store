@@ -43,5 +43,14 @@ const bookStore = {
     ]
 }
 
-// Write your code here!
+const bookStoreTitle = document.getElementById("header");
+bookStoreTitle.textContent = bookStore.name;
+
+const firstBook = bookStore.books[0];
+const bookItem = document.createElement("li");
+const bookTitle = document.createElement("h3");
+
+bookTitle.textContent = firstBook.title;
+bookItem.appendChild(bookTitle);
+document.getElementById("book-list").appendChild(bookItem);
 
